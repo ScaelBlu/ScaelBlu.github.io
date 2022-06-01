@@ -1,60 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Birthday</title>
-    <link rel="shortcut icon" href="favicon.gif">
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <script src="https://kit.fontawesome.com/7f20de9983.js" crossorigin="anonymous"></script>
-    <style>
-        @keyframes slideInFromLeft {
-            100% {
-            transform: translateX(0);
-            }
-            0% {
-            transform: translateX(-100%);
-            }
-        }
-        body {
-            background-color: rgb(133, 52, 153);
-        }
-        #catcat {
-            margin: 0px 20px 0px 75px;
-        }
-        p {
-            font-size: 120%;
-            font-family: monospace;
-            color: rgb(159, 159, 159);
-            margin: 0px 150px 0px 0px;
-        }
-        .star {
-            color:darkgoldenrod;
-        }
-    </style>
-    <audio id="audio" src="miluppa.mp3" loop></audio>
+    <title>Cat Disco</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="star.png">
+    <audio id="BadgersInSpace" src="Badgers in Space.mp3" loop></audio>
 </head>
-
 <body>
-    <center style="margin-top: 130px;"">
-        <span class="star"><i class="fa-solid fa-arrow-right-long fa-2xl"></i></span>
-        <button class="btn btn-light"  onclick="typeWriter()">A Beautiful Button</button>
-        <span class="star"><i class="fa-solid fa-arrow-left-long fa-2xl"></i></span>
-        <br><br><br>
-    </center>
-    <div class="row">
-        <div class="col-2" style="animation: slideInFromLeft 1s ease-in; animation-play-state: paused;">
-            <img id="catcat" src="output-onlinegiftools.gif" width="75px" style="display: none;">
-        </div>
-        <div class="col-8">
-           <p class="col-10" style="display: inline;" id="szoveg"></p> 
-        </div>
-
+    <div class="button-div">
+        <button class="btn btn-success button" id="start-button" type="button" onclick="letTheShowBegin()">Start</button>
     </div>
-    <center><div class="fa-3x" style="color:tomato"><i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 1.3s;"></i></div></center>
-    <script src="milu.js"></script>
+    <script src="show.js"></script>
 </body>
-
 </html>
