@@ -27,10 +27,10 @@
 
 @keyframes disco {
     from {
-        transform: translateY(-20vh)
+        transform: translateY(-10%)
     }
     to {
-        transform: translateY(13vh)
+        transform: translateY(130%)
     }
 }
 

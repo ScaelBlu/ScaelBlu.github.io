@@ -44,7 +44,7 @@ function lightShow() {
 function getHigh() {
     let discoBall = document.createElement("img");
     discoBall.setAttribute("src", "discoball.gif");
-    discoBall.setAttribute("width", "90vw");
+    discoBall.setAttribute("width", "10%");
     discoBall.setAttribute("class", "discoball");
     document.querySelector("body").appendChild(discoBall);
 }
@@ -53,5 +53,5 @@ function discoDiscoPartyParty() {
     document.getElementById("BadgersInSpace").play();
     setInterval(lightShow, 835);
     setTimeout(() => setInterval(catWalk, 417.5), 12000);
-    setTimeout(getHigh, 25000);
+    setTimeout(getHigh, 250);
 }
