@@ -53,5 +53,5 @@ function discoDiscoPartyParty() {
     document.getElementById("BadgersInSpace").play();
     setInterval(lightShow, 835);
     setTimeout(() => setInterval(catWalk, 417.5), 12000);
-    setTimeout(getHigh, 250);
+    setTimeout(getHigh, 25000);
 }
