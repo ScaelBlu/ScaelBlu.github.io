@@ -50,7 +50,7 @@ body {
 
 .button-div {
     position: absolute;
-    left: 49%;
+    left: 48%;
     top: 49%;
     animation: fade 1.5s linear;
     animation-play-state: paused;
