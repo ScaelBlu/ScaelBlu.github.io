@@ -23,7 +23,7 @@ function lightShow() {
         cicaLeft.className = "left";
         cicaLeft.setAttribute("id", catId);
         cicaLeft.setAttribute("src", "cicaLeft.gif");
-        cicaLeft.setAttribute("width", "65vw");
+        cicaLeft.setAttribute("width", "6.8%");
         cicaLeft.style.bottom = `${parseInt(side * window.innerHeight+1)}px`;
         cicaLeft.style.left = "0px";
         cicaLeft.addEventListener("animationend", () => document.querySelector("body").removeChild(document.getElementById(catId)));
@@ -33,7 +33,7 @@ function lightShow() {
         cicaRight.className = "right";
         cicaRight.setAttribute("id", catId);
         cicaRight.setAttribute("src", "cicaRight.gif");
-        cicaRight.setAttribute("width", "65vw");
+        cicaRight.setAttribute("width", "6.8%");
         cicaRight.style.bottom = `${parseInt(side * window.innerHeight+1)}px`;
         cicaRight.style.right = "0px";
         cicaRight.addEventListener("animationend", () => document.querySelector("body").removeChild(document.getElementById(catId)));

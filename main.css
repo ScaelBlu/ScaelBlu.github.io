@@ -36,22 +36,22 @@
 
 body {
     margin: 0px;
-    width: 100vw;
-    height: 100vh;
+    width: auto;
+    height: auto;
 }
 
 .discoball {
     position: absolute;
-    bottom: 100vh;
-    left: 47vw;
+    bottom: 100%;
+    left: 48%;
     animation: disco 2s linear;
     animation-fill-mode: forwards;
 }
 
 .button-div {
     position: absolute;
-    left: 50%;
-    top: 50%;
+    left: 49%;
+    top: 49%;
     animation: fade 1.5s linear;
     animation-play-state: paused;
 }
