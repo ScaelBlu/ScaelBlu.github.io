@@ -13,11 +13,11 @@ function lightShow() {
         let g = parseInt(Math.random()*256);
         let b = parseInt(Math.random()*256);
         document.querySelector("body").style.backgroundColor = `rgb(${r}, ${g}, ${b})`
-}
-
-function catWalk() {
-    let side = Math.random();
-    let catId = side.toString;
+    }
+    
+    function catWalk() {
+        let side = Math.random();
+        let catId = side.toString;
     if(side < 0.5) {
         let cicaLeft = document.createElement("img");
         cicaLeft.className = "left";
@@ -41,8 +41,17 @@ function catWalk() {
     }
 }
 
+function getHigh() {
+    let discoBall = document.createElement("img");
+    discoBall.setAttribute("src", "discoball.gif");
+    discoBall.setAttribute("width", "90vw");
+    discoBall.setAttribute("class", "discoball");
+    document.querySelector("body").appendChild(discoBall);
+}
+
 function discoDiscoPartyParty() {
     document.getElementById("BadgersInSpace").play();
     setInterval(lightShow, 835);
     setTimeout(() => setInterval(catWalk, 417.5), 12000);
+    setTimeout(getHigh, 25000);
 }

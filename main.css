@@ -25,17 +25,34 @@
     }    
 }
 
+@keyframes disco {
+    from {
+        transform: translateY(-20vh)
+    }
+    to {
+        transform: translateY(13vh)
+    }
+}
+
 body {
     margin: 0px;
     width: 100vw;
     height: 100vh;
 }
 
+.discoball {
+    position: absolute;
+    bottom: 100vh;
+    left: 47vw;
+    animation: disco 2s linear;
+    animation-fill-mode: forwards;
+}
+
 .button-div {
     position: absolute;
     left: 50%;
     top: 50%;
-    animation: fade 0.1s linear;
+    animation: fade 1.5s linear;
     animation-play-state: paused;
 }
 
