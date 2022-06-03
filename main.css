@@ -1,9 +1,15 @@
+@font-face {
+    font-family: "superCatFont";
+    src: url("AlfaSlabOne-Regular.ttf");
+    font-weight: 500;
+}
+
 @keyframes fromLeft {
     from {
         transform: translateX(0vw)
     }
     to {
-        transform: translateX(96vw)
+        transform: translateX(93.5vw)
     }
 }
 
@@ -40,12 +46,27 @@ body {
     height: auto;
 }
 
-.discoball {
+.partyHard {
     position: absolute;
     bottom: 100%;
     left: 48%;
-    animation: disco 2s linear;
-    animation-fill-mode: forwards;
+    animation: disco 2s linear forwards;
+}
+
+.partyEnd {
+    position: absolute;
+    bottom: 100%;
+    left: 48%;
+    animation: disco 2s linear reverse forwards;
+}
+
+.counter {
+    position: absolute;
+    left: 48%;
+    top: 45%;
+    font-family: "superCatFont";
+    color:#fff;
+    font-size: 700%;
 }
 
 .button-div {
