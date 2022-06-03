@@ -39,7 +39,7 @@ function countBack() {
 
 function catWalk() {
     let side = Math.random();
-    let catId = side.toString;
+    let catId = side.toString();
     if(side < 0.5) {
         let cicaLeft = document.createElement("img");
         cicaLeft.className = "left";
@@ -48,7 +48,7 @@ function catWalk() {
         cicaLeft.setAttribute("width", "6.8%");
         cicaLeft.style.bottom = `${parseInt(side * window.innerHeight+1)}px`;
         cicaLeft.style.left = "0px";
-            cicaLeft.addEventListener("click", () => {
+            cicaLeft.addEventListener("mousedown", () => {
                 cicaLeft.setAttribute("src", "starr.png");
                 cicaLeft.style.animationPlayState = "paused";
                 document.getElementById("effect").play();
@@ -64,7 +64,7 @@ function catWalk() {
         cicaRight.setAttribute("width", "6.8%");
         cicaRight.style.bottom = `${parseInt(side * window.innerHeight+1)}px`;
         cicaRight.style.right = "0px";
-            cicaRight.addEventListener("click", () => {
+            cicaRight.addEventListener("mousedown", () => {
                 cicaRight.setAttribute("src", "starr.png");
                 cicaRight.style.animationPlayState = "paused";
                 document.getElementById("effect").play();
