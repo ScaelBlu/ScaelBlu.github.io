@@ -8,6 +8,7 @@ function letTheShowBegin() {
         discoDiscoPartyParty();
     });
 }
+
 function discoDiscoPartyParty() {
     document.getElementById("BadgersInSpace").play();
     document.getElementById("BadgersInSpace").addEventListener("ended", partyEnd);
@@ -35,6 +36,7 @@ function countBack() {
     setTimeout(() => bodyElement.removeChild(counter), 835*4);
 }
 
+
 function catWalk() {
     let side = Math.random();
     let catId = side.toString;
@@ -46,6 +48,12 @@ function catWalk() {
         cicaLeft.setAttribute("width", "6.8%");
         cicaLeft.style.bottom = `${parseInt(side * window.innerHeight+1)}px`;
         cicaLeft.style.left = "0px";
+            cicaLeft.addEventListener("click", () => {
+                cicaLeft.setAttribute("src", "starr.png");
+                cicaLeft.style.animationPlayState = "paused";
+                document.getElementById("effect").play();
+                document.getElementById("effect").addEventListener("ended", () => bodyElement.removeChild(document.getElementById(catId)));
+            });
         cicaLeft.addEventListener("animationend", () => bodyElement.removeChild(document.getElementById(catId)));
         bodyElement.appendChild(cicaLeft)
     } else {
@@ -56,6 +64,12 @@ function catWalk() {
         cicaRight.setAttribute("width", "6.8%");
         cicaRight.style.bottom = `${parseInt(side * window.innerHeight+1)}px`;
         cicaRight.style.right = "0px";
+            cicaRight.addEventListener("click", () => {
+                cicaRight.setAttribute("src", "starr.png");
+                cicaRight.style.animationPlayState = "paused";
+                document.getElementById("effect").play();
+                document.getElementById("effect").addEventListener("ended", () => bodyElement.removeChild(document.getElementById(catId)));
+            });
         cicaRight.addEventListener("animationend", () => bodyElement.removeChild(document.getElementById(catId)));
         bodyElement.appendChild(cicaRight)
     }
@@ -66,6 +80,11 @@ function partyHard() {
     discoBall.setAttribute("src", "discoball.gif");
     discoBall.setAttribute("width", "10%");
     discoBall.setAttribute("class", "partyHard");
+    discoBall.addEventListener("click", partyEnd);
+    discoBall.addEventListener("click", () => {
+        document.getElementById("BadgersInSpace").pause();
+        document.getElementById("BadgersInSpace").currentTime = 0;
+    });
     bodyElement.appendChild(discoBall);
 }
 
@@ -78,7 +97,7 @@ function partyEnd() {
     bodyElement.appendChild(discoBall);
     discoBall.addEventListener("animationend", () => {
         clearInterval(1);
-        clearInterval(4);
+        clearInterval(9);
         bodyElement.style.backgroundColor = "#fff";
         bodyElement.removeChild(document.querySelector(".partyEnd"));
         buttonElement.style.animationPlayState = "paused";

@@ -51,6 +51,7 @@ body {
     bottom: 100%;
     left: 48%;
     animation: disco 2s linear forwards;
+    cursor: pointer;
 }
 
 .partyEnd {
@@ -62,7 +63,7 @@ body {
 
 .counter {
     position: absolute;
-    left: 48%;
+    left: 45%;
     top: 45%;
     font-family: "superCatFont";
     color:#fff;
@@ -133,10 +134,12 @@ body {
     position: absolute;
     animation: fromLeft 1252.5ms ease-in;
     animation-delay: 417.5ms;
+    cursor: pointer;
 }
 
 .right {
     position: absolute;
     animation: fromRight 1252.5ms ease-in;
     animation-delay: 417.5ms;
+    cursor: pointer;
 }
