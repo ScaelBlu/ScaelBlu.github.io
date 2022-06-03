@@ -1,3 +1,5 @@
+document.onselectstart = () => {return false};
+document.ondragstart = () => {return false};
 let buttonElement = document.querySelector(".button-div");
 let bodyElement = document.querySelector("body");
 let score = 0;
@@ -60,13 +62,13 @@ function catWalk() {
         cicaLeft.setAttribute("width", "6.8%");
         cicaLeft.style.bottom = `${parseInt(side * window.innerHeight+1)}px`;
         cicaLeft.style.left = "0px";
-            cicaLeft.addEventListener("mousedown", () => {
-                cicaLeft.setAttribute("src", "starr.png");
-                cicaLeft.style.animationPlayState = "paused";
-                fx.play();
-                score++;
-                fx.addEventListener("ended", () => bodyElement.removeChild(document.getElementById(catId)));
-            });
+        cicaLeft.addEventListener("mousedown", () => {
+            cicaLeft.setAttribute("src", "starr.png");
+            cicaLeft.style.animationPlayState = "paused";
+            fx.play();
+            score++;
+            fx.addEventListener("ended", () => bodyElement.removeChild(document.getElementById(catId)));
+        });
         cicaLeft.addEventListener("animationend", () => bodyElement.removeChild(document.getElementById(catId)));
         bodyElement.appendChild(cicaLeft)
     } else {
