@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="main.css">
     <link rel="shortcut icon" href="star.png">
     <audio id="BadgersInSpace" src="BadgersInSpace.mp3"></audio>
-    <audio id="effect" src="collect.mp3"></audio>
+    <audio id="effect" src="collect.mp3" volume="0.2"></audio>
 </head>
 <body>
     <div class="button-div">
-        <button class="btn btn-success button" id="start-button" type="button" onclick="letTheShowBegin()">Start</button>
+        <button class="btn btn-success" id="start-button" type="button" onclick="letTheShowBegin()">Start</button>
+        <br>
+        <small>Score: <span></span></small>
     </div>
     <script src="show.js"></script>
 </body>
