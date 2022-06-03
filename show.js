@@ -1,6 +1,6 @@
 document.onselectstart = () => {return false};
 document.ondragstart = () => {return false};
-let buttonElement = document.querySelector(".button-div");
+let buttonElement = document.querySelector(".container");
 let bodyElement = document.querySelector("body");
 let score = 0;
 document.getElementsByTagName("span")[0].innerHTML = score;
@@ -111,6 +111,7 @@ function partyEnd() {
         bodyElement.style.backgroundColor = "#fff";
         bodyElement.removeChild(document.querySelector(".partyEnd"));
         document.getElementsByTagName("span")[0].innerHTML = score;
+        document.querySelector('button').innerHTML = "Play again"
         buttonElement.style.animationPlayState = "paused";
         buttonElement.style.display = "block";
     });

@@ -1,49 +1,51 @@
 @font-face {
-    font-family: "superCatFont";
-    src: url("PressStart2P-Regular.ttf");
+    font-family: 'superCatFont';
+    src: url('PressStart2P-Regular.ttf');
     font-weight: 500;
 }
 
 @keyframes fromLeft {
-    from {
-        transform: translateX(0vw)
-    }
-    to {
-        transform: translateX(93.5vw)
-    }
+    from {transform: translateX(0vw)}
+    to {transform: translateX(93.5vw)}
 }
 
 @keyframes fromRight {
-    from {
-        transform: translateX(0vw);
-    }
-    to {
-        transform: translateX(-100vw)
-    }    
+    from {transform: translateX(0vw);}
+    to {transform: translateX(-100vw)}    
 }
 
 @keyframes fade {
-    from {
-        opacity: 1.0;
-    }
-    to {
-        opacity: 0.0;
-    }    
+    from {opacity: 1.0;}
+    to {opacity: 0.0;}    
 }
 
 @keyframes disco {
-    from {
-        transform: translateY(-10%)
-    }
-    to {
-        transform: translateY(130%)
-    }
+    from {transform: translateY(-10%)}
+    to {transform: translateY(130%)}
 }
 
-body {
-    margin: 0px;
-    width: auto;
-    height: auto;
+@keyframes title {
+    0% {color:red;}
+    20% {color:rgb(255, 255, 0);}
+    40% {color: rgb(0, 255, 0)}
+    60% {color: rgb(0, 255, 255)}
+    80% {color:rgb(0, 0, 255)}
+    100% {color:rgb(255, 0, 0);}
+}
+
+#title {
+    font-family: 'superCatFont';
+    margin-top: 0px;
+    margin-bottom: 10%;
+    font-size: 350%;
+    animation: title 10s linear infinite normal;
+}
+
+#creator {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 70%;
+    color:black;
+    margin-top: 20%;
 }
 
 .partyHard {
@@ -62,29 +64,39 @@ body {
 }
 
 .counter {
+    left: 50%;
+    top: 50%;
+    width: 100px;
+    height: 100px;
     position: absolute;
-    left: 45%;
-    top: 45%;
-    font-family: "superCatFont";
+    margin-left: -50px;
+    margin-top: -50px;
+    font-family: 'superCatFont';
     color:#fff;
-    font-size: 700%;
+    font-size: 500%;
     text-align: center;
+    vertical-align: middle;
 }
 
-.button-div {
+.container {
+    left: 50%;
+    top: 50%;
+    width: 300px;
+    height: 300px;
+    margin-left: -150px;
+    margin-top: -150px;
     position: absolute;
-    font-family: "superCatFont";
-    left: 48%;
-    top: 49%;
+    font-family: 'superCatFont';
     animation: fade 1.5s linear;
     animation-play-state: paused;
     color:dimgray;
+    text-align: center;
 }
 
 .btn {
     --bs-btn-padding-x: 0.75rem;
     --bs-btn-padding-y: 0.375rem;
-    --bs-btn-font-family: "superCatFont";
+    --bs-btn-font-family: 'superCatFont';
     --bs-btn-font-size: 1rem;
     --bs-btn-font-weight: 400;
     --bs-btn-line-height: 1.5;
@@ -96,7 +108,8 @@ body {
     --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
     --bs-btn-disabled-opacity: 0.65;
     --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
-    display: inline-block;
+    margin: auto;
+    display: block;
     padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
     font-family: var(--bs-btn-font-family);
     font-size: var(--bs-btn-font-size);
