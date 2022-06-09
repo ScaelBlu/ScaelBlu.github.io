@@ -8,16 +8,22 @@
     <title>Cat Disco</title>
     <link rel="stylesheet" href="main.css">
     <link rel="shortcut icon" href="star.png">
-    <audio id="BadgersInSpace" src="BadgersInSpace.mp3"></audio>
-    <audio id="effect" src="collect.mp3" volume="0.2"></audio>
 </head>
 
 <body>
-    <div class="container">
+    <div class="starter">
         <p id="title">Cat Disco</p>
         <button class="btn btn-success" id="start-button" type="button" onclick="letTheShowBegin()">Start</button>
-        <br>
-        <small>Score: <span></span></small>
+        <form>
+            <select>
+                <option value="0" selected>-- Choose a song --</option>
+                <option value="1">Badgers In Space</option>
+                <option value="2">March Of The Nucleotides</option>
+                <option value="3">PuiPui 3</option>
+                <option value="4">Beavis II</option>
+            </select>
+            <br>
+        </form>
         <p id="creator">Created by<br>[Blu]</p>
     </div>
     <script src="show.js"></script>

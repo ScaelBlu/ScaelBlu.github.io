@@ -11,7 +11,7 @@
 
 @keyframes fromRight {
     from {transform: translateX(0vw);}
-    to {transform: translateX(-100vw)}    
+    to {transform: translateX(-100vw);}    
 }
 
 @keyframes fade {
@@ -37,13 +37,13 @@
     font-family: 'superCatFont';
     margin-top: 0px;
     margin-bottom: 10%;
-    font-size: 350%;
+    font-size: 6.9vw;
     animation: title 10s linear infinite normal;
 }
 
 #creator {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 70%;
+    font-size: 1.3vw;
     color:black;
     margin-top: 20%;
 }
@@ -73,12 +73,12 @@
     margin-top: -50px;
     font-family: 'superCatFont';
     color:#fff;
-    font-size: 500%;
+    font-size: 8vw;
     text-align: center;
     vertical-align: middle;
 }
 
-.container {
+.starter {
     left: 50%;
     top: 50%;
     width: 300px;
@@ -91,13 +91,14 @@
     animation-play-state: paused;
     color:dimgray;
     text-align: center;
+    font-size: 2.7vw;
 }
 
 .btn {
     --bs-btn-padding-x: 0.75rem;
     --bs-btn-padding-y: 0.375rem;
     --bs-btn-font-family: 'superCatFont';
-    --bs-btn-font-size: 1rem;
+    --bs-btn-font-size: 1.6vw;
     --bs-btn-font-weight: 400;
     --bs-btn-line-height: 1.5;
     --bs-btn-color: #212529;
@@ -109,7 +110,7 @@
     --bs-btn-disabled-opacity: 0.65;
     --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
     margin: auto;
-    display: block;
+    display: inline-block;
     padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
     font-family: var(--bs-btn-font-family);
     font-size: var(--bs-btn-font-size);
@@ -151,11 +152,52 @@
     animation: fromLeft 1252.5ms ease-in;
     animation-delay: 417.5ms;
     cursor: pointer;
+    left: 0px;
 }
 
 .right {
     position: absolute;
-    animation: fromRight 1252.5ms ease-in;
+    animation: fromRight 1252.5ms ease-in none;
     animation-delay: 417.5ms;
     cursor: pointer;
+    right: 0px;
+}
+
+select {
+    margin-top: 10%;
+    font-family: 'superCatFont';
+    font-size: 1.2vw;
+    width: 92%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+select:focus {
+    box-shadow: 0 0 20px green;
+    border-color: blueviolet;
+    border-width: 3px;
+}
+
+.score {
+    left: 50%;
+    top: 50%;
+    width: 50%;
+    height: 30%;
+    position: absolute;
+    margin-left: -25%;
+    margin-top: -15%;
+    font-family: 'superCatFont';
+    color:rgba(100, 100, 100, 0.334);
+    font-size: 10vw;
+    text-align: center;
+    vertical-align: middle;
+    animation: fade 1.5s linear forwards;
+    animation-play-state: paused;
+}
+
+.warning {
+    font-family: Arial;
+    font-size: 1.4vw;
+    color: red;
+    display: none;
 }
