@@ -111,7 +111,7 @@ function cicaCreate(attr) {
         fx.addEventListener("ended", () => bodyElement.removeChild(cica));
         fx.play();
         scoreNum.innerHTML = ++score;
-    });
+    }, {once: true});
     bodyElement.appendChild(cica)
 }
 
