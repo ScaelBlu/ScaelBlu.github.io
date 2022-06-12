@@ -43,7 +43,7 @@
 
 #creator {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 1.1vw;
+    font-size: 0.9vw;
     color:black;
     margin-top: 20%;
 }
@@ -167,13 +167,13 @@ select {
     margin-top: 10%;
     font-family: 'superCatFont';
     font-size: 0.95vw;
-    width: 85%;
+    width: 25vw;
     border-radius: 10px;
     text-align: center;
 }
 
 select:focus {
-    box-shadow: 0 0 20px green;
+    box-shadow: 0 0 1.5vw green;
     border-color: blueviolet;
     border-width: 3px;
 }
