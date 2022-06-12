@@ -81,10 +81,10 @@
 .starter {
     left: 50%;
     top: 50%;
-    width: 300px;
-    height: 300px;
-    margin-left: -150px;
-    margin-top: -150px;
+    width: 30vw;
+    height: 30vw;
+    margin-left: -15vw;
+    margin-top: -15vw;
     position: absolute;
     font-family: 'superCatFont';
     animation: fade 1.5s linear;
