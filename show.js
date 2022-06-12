@@ -162,7 +162,7 @@ function partyEnd() {
         let ending = document.createElement('p');
         ending.innerHTML = 'Thanks for the game!';
         let final = document.createElement('p');
-        final.innerHTML = `You've made ${score} cat high!`;
+        final.innerHTML = `You've made ${score} cat happier!`;
         if(score > 1){
             final.innerHTML = final.innerHTML.replace('cat', 'cats');
         };
