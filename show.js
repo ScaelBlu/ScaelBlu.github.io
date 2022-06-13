@@ -32,8 +32,6 @@ fx.id = 'effect';
 fx.src = 'play/collect.mp3';
 fx.volume = 0.15;
 
-
-
 let timeUnit;
 let counterTime;
 let catsTime;
@@ -41,6 +39,61 @@ let partyhardTime;
 
 let cicaSet;
 let showSet;
+
+let txt = 'Ez egy about szöveg amit ki fogok ide íratni.';
+let i = 0;
+
+function aboutAnim() {
+    let id = null;
+    const elem = document.getElementById("animate");
+    let x = 0;
+    let y = 50;
+    let a = 'x++';
+    let b = 'y++';
+    let c;
+    let pugGif = document.querySelector('#puggif');
+    clearInterval(id);
+    id = setInterval(pug, 30);
+
+    function pug() {
+        c = parseFloat(Math.random().toPrecision(2)) + 4;
+        if (x >= document.querySelector('.aboutContainer').clientWidth-pugGif.clientWidth) {
+            a = `x-=${c}`;
+            pugGif.src = 'pug-runR.gif';
+        } else if (x <= 0) {
+            pugGif.src = 'pug-runL.gif';
+            a = `x+=${c}`;
+        };
+        if (y <= 0) {
+            b = `y+=${c}`;
+        } else if (y >= document.querySelector('.aboutContainer').clientHeight-pugGif.clientWidth) {
+            b = `y-=${c}`;
+        };
+        eval(a);
+        eval(b);
+        pugGif.style.left = x + "px";
+        pugGif.style.top = y + "px";
+    }
+}
+
+function about() {
+    startContainer.addEventListener('animationend', () => {
+        startContainer.style.display = 'none';
+        let aboutContainer = document.createElement('div');
+        aboutContainer.className = 'aboutContainer';
+        let pugGif = document.createElement('img');
+        pugGif.id = 'puggif';
+        pugGif.src = 'pug-runL.gif';
+        aboutContainer.appendChild(pugGif);
+        let creator = document.createElement('p');
+        creator.innerHTML = 'by [Blu]';
+        creator.id = 'creator';
+        bodyElement.appendChild(aboutContainer);
+        bodyElement.appendChild(creator);
+        aboutContainer.addEventListener('animationend', aboutAnim);
+    });
+    startContainer.style.animationPlayState = 'running';
+}
 
 function letTheShowBegin() {
     score = 0;
@@ -61,12 +114,13 @@ function letTheShowBegin() {
             case '4':
                 discoDiscoPartyParty(1856, 460, 28 * 460, 36 * 460, 31000, 'play/Beavis.mp3');
         }
-        startContainer.style.animationPlayState = "running";
         startContainer.addEventListener("animationend", () => {
-            startContainer.style.display = "none"
+            startContainer.style.display = "none";
             startContainer.removeChild(document.querySelector('button'));
             startContainer.removeChild(document.querySelector('form'));
-        });
+            startContainer.removeChild(document.querySelector('#about'));
+        }, { once: true });
+        startContainer.style.animationPlayState = "running";
     }
 }
 
@@ -91,12 +145,13 @@ function countBack(timeUnit) {
     counter.setAttribute("class", "counter");
     counter.innerHTML = "3";
     bodyElement.appendChild(counter);
-    setTimeout(() => counter.innerHTML = "2", timeUnit*2);
-    setTimeout(() => counter.innerHTML = "1", timeUnit*4);
-    setTimeout(() => counter.innerHTML = "GO", timeUnit*6);
+    setTimeout(() => counter.innerHTML = "2", timeUnit * 2);
+    setTimeout(() => counter.innerHTML = "1", timeUnit * 4);
+    setTimeout(() => counter.innerHTML = "GO", timeUnit * 6);
     setTimeout(() => {
         bodyElement.removeChild(counter);
-        bodyElement.appendChild(scoreContainer)}, timeUnit*8);
+        bodyElement.appendChild(scoreContainer)
+    }, timeUnit * 8);
 }
 
 function cicaCreate(attr) {
@@ -111,7 +166,7 @@ function cicaCreate(attr) {
         fx.addEventListener("ended", () => bodyElement.removeChild(cica));
         fx.play();
         scoreNum.innerHTML = ++score;
-    }, {once: true});
+    }, { once: true });
     bodyElement.appendChild(cica)
 }
 
@@ -160,15 +215,15 @@ function partyEnd() {
         bodyElement.style.backgroundColor = "#fff";
         bodyElement.removeChild(document.querySelector(".partyEnd"));
         let ending = document.createElement('p');
-        ending.innerHTML = 'Thanks for the game!';
+        ending.innerHTML = 'Game over';
         let final = document.createElement('p');
         final.innerHTML = `You've made ${score} cat happier!`;
-        if(score > 1){
+        if (score > 1) {
             final.innerHTML = final.innerHTML.replace('cat', 'cats');
         };
         startContainer.insertBefore(ending, document.querySelector('#creator'));
         startContainer.insertBefore(final, document.querySelector('#creator'));
-        startContainer.style.animationPlayState = "paused";
+        startContainer.style.animation = 'fade 1.5s linear reverse backwards';
         startContainer.style.display = "block";
         warning.style.display = "none";
     });

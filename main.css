@@ -45,7 +45,38 @@
     font-family: 'Courier New', Courier, monospace;
     font-size: 0.9vw;
     color:black;
+    margin-top: 11vh;
+    margin-bottom: 0vh;
+    text-align: center;
+    position: relative;
+}
+
+#about {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1vw;
+    color:black;
     margin-top: 20%;
+    cursor: pointer;
+}
+
+#puggif {
+    position: relative;
+    width: 6vw;
+    height: 6vw;
+    top: 50px;
+    left: 0px;
+}
+
+.aboutContainer {
+    outline: rgba(173, 173, 163, 0.5) 0.4vw inset;
+    border: rgb(173, 173, 163, 0.5) 0.2vw solid;
+    position: relative;
+    width: 80vw;
+    height: 80vh;
+    margin: 0;
+    top: 10vh;
+    left: 10vw;
+    animation: fade 1.5s linear reverse forwards;
 }
 
 .partyHard {
