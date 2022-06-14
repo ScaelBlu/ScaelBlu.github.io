@@ -40,12 +40,8 @@ let partyhardTime;
 let cicaSet;
 let showSet;
 
-let txt = 'Ez egy about szöveg amit ki fogok ide íratni.';
-let i = 0;
-
 function aboutAnim() {
     let id = null;
-    const elem = document.getElementById("animate");
     let x = 0;
     let y = 50;
     let a = 'x++';
